@@ -115,7 +115,7 @@ github.com/preichenberger/go-coinbasepro/v2
 # github.com/shopspring/decimal v1.3.1
 ## explicit; go 1.13
 github.com/shopspring/decimal
-# github.com/sirupsen/logrus v1.9.0
+# github.com/sirupsen/logrus v1.9.3
 ## explicit; go 1.13
 github.com/sirupsen/logrus
 # github.com/sklinkert/circularbuffer v0.0.0-20210106170632-b66327ee381c
