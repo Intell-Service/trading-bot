@@ -19,8 +19,8 @@ require (
 	github.com/sklinkert/circularbuffer v0.0.0-20210106170632-b66327ee381c
 	github.com/sklinkert/igmarkets v0.0.0-20211012140330-96568d0347d0
 	gorm.io/driver/postgres v1.3.10
-	gorm.io/driver/sqlite v1.4.3
-	gorm.io/gorm v1.24.6
+	gorm.io/driver/sqlite v1.6.0
+	gorm.io/gorm v1.30.0
 )
 
 require (
@@ -40,12 +40,12 @@ require (
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.10 // indirect
 	github.com/klauspost/compress v1.10.7 // indirect
-	github.com/mattn/go-sqlite3 v1.14.15 // indirect
+	github.com/mattn/go-sqlite3 v1.14.22 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect
 	github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.21.0 // indirect
 	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa // indirect
 	golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8 // indirect
-	golang.org/x/text v0.3.7 // indirect
+	golang.org/x/text v0.20.0 // indirect
 )
