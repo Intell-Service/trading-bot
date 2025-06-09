@@ -71,7 +71,7 @@ func appendSettingFromTag(tag reflect.StructTag, value string) reflect.StructTag
 // GetRelationsValues get relations's values from a reflect value
 func GetRelationsValues(ctx context.Context, reflectValue reflect.Value, rels []*Relationship) (reflectResults reflect.Value) {
 	for _, rel := range rels {
-		reflectResults = reflect.MakeSlice(reflect.SliceOf(reflect.PtrTo(rel.FieldSchema.ModelType)), 0, 1)
+		reflectResults = reflect.MakeSlice(reflect.SliceOf(reflect.PointerTo(rel.FieldSchema.ModelType)), 0, 1)
 
 		appendToResults := func(value reflect.Value) {
 			if _, isZero := rel.Field.ValueOf(ctx, value); !isZero {
@@ -114,6 +114,11 @@ func GetIdentityFieldValuesMap(ctx context.Context, reflectValue reflect.Value, 
 		loaded        = map[interface{}]bool{}
 		notZero, zero bool
 	)
+
+	if reflectValue.Kind() == reflect.Ptr ||
+		reflectValue.Kind() == reflect.Interface {
+		reflectValue = reflectValue.Elem()
+	}
 
 	switch reflectValue.Kind() {
 	case reflect.Struct:
